@@ -9,8 +9,8 @@ describe "Authors page", :type => :feature do
 
   it "should have a field 'Firstname', 'Lastname', 'Homepage'" do
     visit new_author_path
-    expect(page).to have_field("author_firstName")
-    expect(page).to have_field("author_lastName")
-    expect(page).to have_field("author_homepage")
+    expect(page).to have_field("first name")
+    expect(page).to have_field("last name")
+    expect(page).to have_field("homepage")
   end
 end

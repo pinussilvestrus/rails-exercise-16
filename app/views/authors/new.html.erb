@@ -1,21 +1,6 @@
 <h1>Creating new author</h1>
-<%= form_for :author do |f| %>
-  <p>
-    <%= f.label :firstName %><br>
-    <%= f.text_field :firstName %>
-  </p>
-
-  <p>
-    <%= f.label :lastName %><br>
-    <%= f.text_field :lastName %>
-  </p>
-
-  <p>
-    <%= f.label :homepage %><br>
-    <%= f.text_field :homepage %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<form>
+  <input type="text" name="first name">
+  <input type="text" name="last name">
+  <input type="text" name="homepage">
+</form>
