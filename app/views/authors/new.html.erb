@@ -1,15 +1,18 @@
 <h1>Creating new author</h1>
-<form>
-  <p>
-    <label for="first name">First name</label><br>
-    <input type="text" name="first name">
-  </p>
-  <p>
-    <label for="last name">Last name</label><br>
-    <input type="text" name="last name">
-  </p>
-  <p>
-    <label for="homepage">Homepage</label><br>
-    <input type="text" name="homepage">
-  </p>
-</form>
+<%= form_for :author do |f| %>
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :homepage %><br>
+    <%= f.text_field :homepage %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

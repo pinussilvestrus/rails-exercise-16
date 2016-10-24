@@ -7,10 +7,10 @@ describe "Authors page", :type => :feature do
     expect(page).to have_text("Creating new author")
   end
 
-  it "should have a field 'Firstname', 'Lastname', 'Homepage'" do
+  it "should have a field 'First name', 'Last name', 'Homepage'" do
     visit new_author_path
-    expect(page).to have_field("first name")
-    expect(page).to have_field("last name")
-    expect(page).to have_field("homepage")
+    expect(page).to have_field("author_first_name")
+    expect(page).to have_field("author_last_name")
+    expect(page).to have_field("author_homepage")
   end
 end
