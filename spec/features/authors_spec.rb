@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Authors page", :type => :feature do
+describe "Authors features", :type => :feature do
 
   it "should render'" do
     visit new_author_path
@@ -17,5 +17,10 @@ describe "Authors page", :type => :feature do
   it "should have a submit button" do
     visit new_author_path
     expect(page).to have_button("create_author")
+  end
+
+  it "Author should have first name, last name, and homepage" do
+    @author = Author.new(first_name: "Alan", last_name: "Turing", homepage: "https://de.wikipedia.org/wiki/Alan_Turing")
+    expect(@author).not_to be_nil
   end
 end
