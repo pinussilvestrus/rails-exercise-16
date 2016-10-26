@@ -1,16 +1,3 @@
 <h1>Creating new author</h1>
-<%= form_for :author, url: authors_path do |f| %>
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :homepage %><br>
-    <%= f.text_field :homepage %>
-  </div>
-  <%= f.submit "Create Author", :name => "create_author", :type => "submit", :id => "create_author"%>
-<% end %>
+
+<%= render 'form' %>

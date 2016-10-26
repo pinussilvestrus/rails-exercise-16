@@ -16,7 +16,7 @@ describe "Authors features", :type => :feature do
 
   it "should have a submit button" do
     visit new_author_path
-    expect(page).to have_button("create_author")
+    expect(page).to have_button("Create Author")
   end
 
   it "Author should have first name, last name, and homepage" do
@@ -24,5 +24,5 @@ describe "Authors features", :type => :feature do
     expect(@author).not_to be_nil
   end
 
-  
+
 end
