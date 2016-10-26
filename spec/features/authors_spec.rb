@@ -16,6 +16,6 @@ describe "Authors page", :type => :feature do
 
   it "should have a submit button" do
     visit new_author_path
-    expect(page).to have_button("create author")
+    expect(page).to have_button("create_author")
   end
 end
