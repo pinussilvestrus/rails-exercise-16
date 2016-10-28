@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe "authors/new", type: :view do
   before(:each) do
     assign(:author, Author.new(
-      :first_name => "MyString",
-      :last_name => "MyString",
-      :homepage => "MyString"
+      :first_name => "Alan",
+      :last_name => "Turing",
+      :homepage => "http://wikipedia.de/Alan_Turing"
     ))
   end
 
