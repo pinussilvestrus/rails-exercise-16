@@ -15,6 +15,16 @@ class AuthorsController < ApplicationController
   def edit
   end
 
+  def create
+    @author = Author.new(author_params)
+
+    if @author.save
+      redirect_to @author, notice: 'Author was successfully created.'
+    else
+      render :new
+    end
+  end
+
   def update
     @author = Author.find(params[:id])
 
@@ -25,14 +35,11 @@ class AuthorsController < ApplicationController
     end
   end
 
-  def create
-    @author = Author.new(author_params)
-
-    if @author.save
-      redirect_to @author, notice: 'Author was successfully created.'
-    else
-      render :new
-    end
+  def destroy
+    print "Hello"
+    @author = Author.find(params[:id])
+    @author.destroy!
+    redirect_to '/authors', :notice => "Your patient has been deleted"
   end
 
   private

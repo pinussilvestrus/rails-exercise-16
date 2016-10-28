@@ -26,4 +26,9 @@ RSpec.describe "authors/index", type: :view do
     render
     assert_select "a", :text => "Edit"
   end
+
+  it "renders a link to delete an author" do
+    render
+    assert_select "a", :text => "Destroy"
+  end
 end
