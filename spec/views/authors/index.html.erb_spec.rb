@@ -16,4 +16,9 @@ RSpec.describe "authors/index", type: :view do
     assert_select "tr>th", :text => "Name".to_s, :count => 1
     assert_select "tr>th", :text => "Homepage".to_s, :count => 1
   end
+
+  it "renders a link to new authors page" do
+    render
+    assert_select "a", :text => "Add author"
+  end
 end
