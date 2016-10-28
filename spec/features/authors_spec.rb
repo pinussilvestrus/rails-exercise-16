@@ -24,5 +24,10 @@ describe "Authors features", :type => :feature do
     expect(@author).not_to be_nil
   end
 
+  it "should list name and homepage of all authors" do
+    visit "/authors/"
+    expect(page).to have_text('Listing authors')
+  end
+
 
 end
