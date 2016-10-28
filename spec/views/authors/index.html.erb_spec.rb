@@ -21,4 +21,9 @@ RSpec.describe "authors/index", type: :view do
     render
     assert_select "a", :text => "Add author"
   end
+
+  it "renders a link to the authors edit page" do
+    render
+    assert_select "a", :text => "Edit"
+  end
 end
