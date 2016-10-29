@@ -14,3 +14,13 @@
   <strong>Homepage:</strong>
   <%= @author.homepage %>
 </p>
+
+<h2> Papers </h2>
+<% @author.papers.each do |paper| %>
+  <p>
+    <%= paper.title %>
+  </p>
+<% end %>
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', authors_path %>
