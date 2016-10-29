@@ -1,6 +1,6 @@
 <h1>Creating new paper</h1>
 
-<%= form_for :paper do |f| %>
+<%= form_for :paper, :url => papers_path do |f| %>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
