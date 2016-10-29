@@ -28,8 +28,11 @@ ActiveRecord::Schema.define(version: 20161029074926) do
     t.string   "title"
     t.string   "venue"
     t.integer  "year"
+    t.integer  "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "papers", ["author_id"], name: "index_papers_on_author_id"
 
 end
