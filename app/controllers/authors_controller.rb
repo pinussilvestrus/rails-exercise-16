@@ -36,10 +36,9 @@ class AuthorsController < ApplicationController
   end
 
   def destroy
-    print "Hello"
     @author = Author.find(params[:id])
     @author.destroy!
-    redirect_to '/authors', :notice => "Your patient has been deleted"
+    redirect_to '/authors', :notice => "Your author has been deleted"
   end
 
   private

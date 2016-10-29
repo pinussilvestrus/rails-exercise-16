@@ -1,6 +1,10 @@
 class PapersController < ApplicationController
   before_action :set_paper, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @papers = Paper.all
+  end
+
   def show
   end
 
@@ -15,8 +19,7 @@ class PapersController < ApplicationController
     @paper = Paper.new(paper_params)
 
     if @paper.save
-      # redirect_to @author, notice: 'Author was successfully created.'
-      render :new
+      redirect_to @paper, notice: 'Paper was successfully created.'
     else
       render :new
     end
@@ -28,6 +31,12 @@ class PapersController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @paper = Paper.find(params[:id])
+    @paper.destroy!
+    redirect_to '/papers', :notice => "Your paper has been deleted"
   end
 
   private
