@@ -24,4 +24,12 @@ RSpec.describe PapersController, type: :feature do
     visit papers_path + "/" + paper.id.to_s
     expect(page).to have_text("Alan Turing")
   end
+
+  it 'should allow a year-filter' do
+    create(:paper, :year => 1950)
+    create(:paper, :year => 1968)
+
+    visit papers_path + "/?year=1950"
+    expect(page).to_not have_text("1968")
+  end
 end
