@@ -1,6 +1,5 @@
 class Paper < ActiveRecord::Base
-  belongs_to :author, :foreign_key => :author_id
-  has_many :authors
+  has_and_belongs_to_many :authors
   validates :title, presence: true
   validates :venue, presence: true
   validates :year, presence: true,

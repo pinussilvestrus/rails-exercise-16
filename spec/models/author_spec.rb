@@ -9,7 +9,7 @@ RSpec.describe Author, type: :model do
     expect(@author.name).to eq(@author.first_name + ' ' + @author.last_name)
   end
 
-  it 'have paper_id' do
-    expect(@author.paper_id).to be_nil
+  it 'have papers' do
+    expect(@author.paper_ids).to be_empty
   end
 end

@@ -9,7 +9,7 @@ RSpec.describe Paper, type: :model do
     expect(@paper.authors).not_to be_nil
   end
 
-  it 'have author_id property' do
-    expect(@paper.author_id).to be_nil
+  it 'have authors' do
+    expect(@paper.author_ids).not_to be_empty
   end
 end
